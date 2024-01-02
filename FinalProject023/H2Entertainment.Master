@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="H2Entertainment.master.cs" Inherits="FinalProject023.H2Entertainment" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .header {
+            min-height: 120px;
+            min-width: 600px;
+            background-color: #FDEDF1;
+            color: #26293D;
+            text-align: center;
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+
+        }
+
+        .nav {
+            background-color: #FDEDF1;
+            color: #26293D;
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .article {
+            background-color: #F2F2F2;
+            color: #26293D;
+            padding: 20px;
+        }
+
+        .footer {
+            height: 40px;
+            background-color: #2D3043;
+            padding: 20px;
+            color: white;
+            font-size: small;
+        }
+
+        .auto-style1 {
+            font-size: x-large;
+            font-family: "Noto Sans";
+        }
+
+        .auto-style2 {
+            text-align: right;
+        }
+
+        .auto-style4 {
+            font-family: "noto Sans";
+            text-decoration: none;
+        }
+        .auto-style6 {
+            font-family: "noto Sans";
+            font-size: small;
+            color: #808080;
+        }
+        .auto-style7 {
+            font-family: "Noto Sans KR";
+            font-size: small;
+            color: #808080;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <asp:Panel ID="Panel1" runat="server">
+                <div class="auto-style2">
+                    <asp:Button ID="Button1" runat="server" Text="HOME" BackColor="#FDEDF1" BorderStyle="None" CssClass="auto-style6" OnClick="Button1_Click" />&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" runat="server" Text="LOGIN" BackColor="#FDEDF1" BorderStyle="None" CssClass="auto-style6" Width="90px" Height="37px" OnClick="Button2_Click" />&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button3" runat="server" Text="JOIN" BackColor="#FDEDF1" BorderStyle="None" CssClass="auto-style6" Width="57px" OnClick="Button3_Click" />&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button4" runat="server" Text="CART" BackColor="#FDEDF1" BorderStyle="None" CssClass="auto-style6" OnClick="Button4_Click" /></div>
+            </asp:Panel>
+            <asp:Panel ID="Panel2" runat="server">
+                <div class="auto-style2">
+                    <asp:Label ID="Label1" runat="server" CssClass="auto-style7"></asp:Label>
+                    <br />
+                    <asp:Button ID="Button5" runat="server" Text="HOME" BackColor="#FDEDF1" BorderStyle="None" CssClass="auto-style6" OnClick="Button5_Click" />&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button6" runat="server" Text="LOGOUT" BackColor="#FDEDF1" BorderStyle="None" CssClass="auto-style6" Width="90px" OnClick="Button6_Click" />&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button7" runat="server" Text="EDIT" BackColor="#FDEDF1" BorderStyle="None" CssClass="auto-style6" Width="57px" OnClick="Button7_Click" />&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button8" runat="server" Text="CART" BackColor="#FDEDF1" BorderStyle="None" CssClass="auto-style6" OnClick="Button8_Click" /></div>
+            </asp:Panel>
+            <strong><span class="auto-style1">H2TOWN<br />
+                & STORE</span></strong>
+            <br />
+        </div>
+
+        <div class="nav" style="border-top-style: solid; border-bottom-style: solid; border-top-width: 0.5px; border-bottom-width: 0.5px; border-top-color: #CCCCCC; border-bottom-color: #CCCCCC">
+            <strong>
+            <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style4" NavigateUrl="~/H2Artist.aspx" ForeColor="#26293D">ARTIST</asp:HyperLink>
+            </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong>
+            <asp:HyperLink ID="HyperLink2" runat="server" CssClass="auto-style4" NavigateUrl="~/FanOnly/H2FanInfo.aspx" ForeColor="#26293D">FAMILY</asp:HyperLink>
+            </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong>
+            <asp:HyperLink ID="HyperLink3" runat="server" CssClass="auto-style4" NavigateUrl="~/FanOnly/H2Goods.aspx" ForeColor="#26293D">H2P!CK</asp:HyperLink>
+            </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <strong>
+            <asp:HyperLink ID="HyperLink13" runat="server" CssClass="auto-style4" NavigateUrl="~/OnlyMD.aspx" ForeColor="#26293D">ONLYMD</asp:HyperLink>
+            </strong>
+        </div>
+
+        <div class="article">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                H2TOWN & STORE
+            </asp:ContentPlaceHolder>
+            <br />
+        </div>
+
+        <div class="footer">
+            Copyright © 2000 H2TOWN Entertainment. All rights reserved.
+            <br />
+            H2TOWN Entertainment 34, Pirundae-ro, Jongno-gu, Seoul, Republic of Korea TEL. 02-399-0825
+        </div>
+    </form>
+</body>
+</html>
